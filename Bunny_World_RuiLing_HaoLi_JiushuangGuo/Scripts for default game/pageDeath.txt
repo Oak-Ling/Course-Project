@@ -1,0 +1,4 @@
+addPage_pageDeath_onEnter|play evillaugh;/
+addShape_1000_500_deadBunny_false_true_death_null_onDrop|hide carrot|play carrotcarrotcarrot|hide pageDeath@deadBunny|hide pageDeath@deadText|show pageDeath@exit;onClick|play evillaugh;/
+addShape_1500_700_deadText_false_true_null_You must appease Bunny of Death!_null/
+addShape_1500_700_exit_false_false_null_null_onClick|goto pageExit;/

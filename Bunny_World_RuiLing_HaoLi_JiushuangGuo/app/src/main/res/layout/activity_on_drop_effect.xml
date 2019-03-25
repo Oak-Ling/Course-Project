@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onDropEffectActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/onDropCurrentShapeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:text=" Add Shape On Drop Effect"
+            android:textSize="15dp"
+            android:gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/onDropEffectSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:minWidth="120dp">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/onDropPageSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="120dp">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/onDropItemSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="120dp">
+        </Spinner>
+
+
+
+        <Button
+            android:id="@+id/addDropEffectButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Add Effect" />
+        <Button
+            android:id="@+id/saveDropButton_page_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "SAVE Effect" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" Current on Drop Effect  "
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"
+            android:layout_gravity="center_vertical" />
+        <ListView
+            android:id="@+id/onDropEffectListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="42dp"/>
+    </LinearLayout>
+</LinearLayout>

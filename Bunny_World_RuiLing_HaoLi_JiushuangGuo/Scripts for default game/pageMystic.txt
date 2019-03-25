@@ -1,0 +1,4 @@
+addPage_pageMystic_onEnter|show Page1@door2;/
+addShape_200_800_mysticDoor_false_true_null_null_onClick|goto Page1;/
+addShape_1000_200_mysticBunny_false_true_mystic_null_onClick|hide dropped@carrot|play munch;/
+addShape_1000_400_BunnyText_false_true_null_Mystic Bunny-Rub my tummy for a big surprise_null/

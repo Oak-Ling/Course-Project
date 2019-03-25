@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onClickEffectActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/onClickCurrentShapeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:text=" Add Shape On Click Effect"
+            android:gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/onClickEffectSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:minWidth="120dp">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/onClickPageSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="120dp">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/onClickItemSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="120dp">
+        </Spinner>
+
+
+
+        <Button
+            android:id="@+id/addClickEffectButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Add Effect" />
+        <Button
+            android:id="@+id/saveClickButton_page_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "SAVE Effect" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:text=" Current On Click Effect  "
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_vertical" />
+        <ListView
+            android:id="@+id/onClickEffectListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="42dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

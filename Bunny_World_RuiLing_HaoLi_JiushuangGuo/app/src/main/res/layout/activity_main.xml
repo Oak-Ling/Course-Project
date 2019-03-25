@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game World"
+        android:textColor="#3A24FF"
+        android:shadowColor="#A85BA3"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:fontFamily="casual"
+        android:textSize="60dp"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+
+    <ImageView
+        android:layout_marginTop="-20dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/video_game" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/creatGameBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Create Game"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="gotoEditor"
+                />
+
+            <Spinner
+                android:id="@+id/gameSpinner"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                >
+            </Spinner>
+
+            <Button
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:id="@+id/editGameBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Edit Game"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                android:onClick="gotoExistEditor"
+            />
+
+            <Button
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:id="@+id/playGameBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Play Game"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                android:onClick="gotoPlay"/>
+
+            <Button
+                android:id="@+id/deleteGame"
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="Delete Game"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                android:layout_marginRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/resetDatabase"
+                android:textColor="#3A24FF"
+                android:shadowColor="#A85BA3"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="Reset Database"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                android:layout_marginRight="5dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

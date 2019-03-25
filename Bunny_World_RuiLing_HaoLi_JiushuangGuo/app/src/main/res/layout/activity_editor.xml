@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="5.5"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addPageId"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text= "+"
+                android:textSize = "20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/removePageId"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize = "20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+            <Spinner
+                android:id="@+id/pageSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+            </Spinner>
+
+            <EditText
+                android:id="@+id/renamePageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Rename current page"/>
+
+            <Button
+                android:id="@+id/renamePageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rename"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/addPageEffectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Page Effect"
+                android:onClick="addPageEffect"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+
+            <!--<Button-->
+                <!--android:id="@+id/savePageButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="SAVE PAGE"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:gravity="center_vertical"/>-->
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text= "undo page"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginLeft="50dp">-->
+                <!--<EditText-->
+                    <!--android:id="@+id/gameName"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="GAME NAME"-->
+                    <!--android:layout_gravity="fill"-->
+                    <!--android:gravity="fill"/>-->
+
+                <!--<Button-->
+                    <!--style="@style/Widget.AppCompat.Button.Colored"-->
+                    <!--android:id="@+id/saveGame"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="SAVE GAME"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:layout_gravity="fill"-->
+                    <!--/>-->
+            <!--</LinearLayout>-->
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Page Effect: "
+                android:textSize="15dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/currentPageEffect_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Shape Effect: "
+                android:textSize="15dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/currentShapeEffect_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"/>
+
+
+        <edu.stanford.cs108.gameeditor.PageViewEditor
+            android:id="@+id/page_view_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/addShapeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add Shape"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="15dp"/>
+
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1.Choose Shape"-->
+            <!--android:textSize="15dp"/>-->
+
+        <!--// if choose now shape then add new shape-->
+        // otherwise update
+        <Spinner
+            android:id="@+id/shapeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/renameShapeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rename"
+            android:textSize="15dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/removeShapeBtn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="remove"
+                android:textSize="15dp"/>
+            <Button
+                android:id="@+id/renameShapeBtn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="rename"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:layout_marginTop="-5dp">
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text=""-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_gravity="top"/>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEFT:"
+                android:layout_marginLeft="4dp"
+                android:textSize="15dp"
+                android:layout_gravity="top"/>
+            <EditText
+                android:id="@+id/left_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:inputType="numberDecimal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:text="TOP:"/>
+            <EditText
+                android:id="@+id/top_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:layout_marginTop="-8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RIGHT:"
+                android:layout_marginLeft="3dp"
+                android:textSize="15dp"
+                android:layout_gravity="top"/>
+            <EditText
+                android:id="@+id/right_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:inputType="numberDecimal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:text="BOT:"/>
+            <EditText
+                android:id="@+id/bottom_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.Shape Image:"
+            android:textSize="15dp"/>
+
+        <Spinner
+            android:id="@+id/imageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="15dp"
+            android:textSize = "15dp">
+
+        </Spinner>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3."
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/shapeTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shape Text"
+                android:textSize="15dp"
+                android:maxLines="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="4.Movable"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+            <CheckBox
+                android:id="@+id/movableCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="5.Visible"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+            <CheckBox
+                android:id="@+id/visibleCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="6.On Drop"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+            <CheckBox
+                android:id="@+id/dropableCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="On Drop Effect"
+            android:textSize="15dp"
+            android:onClick="onDropEffect"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="7.Clickable"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+            <CheckBox
+                android:id="@+id/clickableCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="On Click Effect"
+            android:textSize="15dp"
+            android:onClick="onClickEffect"
+            />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="3dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="8.Save Shape"/>
+
+
+            <Button
+                android:id="@+id/saveShape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Save Shape"
+                android:onClick="saveShape"/>
+            <Button
+                android:id="@+id/undoShape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Undo Shape"
+                android:onClick="undoShape"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_dark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/gameName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GAME NAME"
+                android:layout_gravity="fill"
+                android:gravity="fill"/>
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/saveGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SAVE GAME"
+                android:textSize="15dp"
+                android:layout_gravity="fill"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+    <!--&lt;!&ndash;<View&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@android:color/darker_gray"/>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<edu.stanford.cs108.gameeditor.PageView-->
+            <!--android:id="@+id/page_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="fill"-->
+            <!--android:layout_weight="1" />-->
+
+        <!--<View-->
+            <!--android:layout_width="2dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@android:color/darker_gray"/>-->
+
+
+       <!---->
+

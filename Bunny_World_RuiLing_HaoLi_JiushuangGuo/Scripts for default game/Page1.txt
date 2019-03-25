@@ -1,0 +1,6 @@
+addPage_Page1_onEnter|play woof;/
+addShape_0_0_bunnyWorldTitle_false_true_null_Bunny World!_null/
+addShape_120_300_bunnyWorldDescription_false_true_null_You are in a maze of twisty little passages, all alike_null/
+addShape_100_800_door1_false_true_null_null_onClick|goto pageMystic;/
+addShape_1000_800_door2_false_false_null_null_onClick|goto pageFire;/
+addShape_1500_800_door3_false_true_null_null_onClick|goto pageDeath;/

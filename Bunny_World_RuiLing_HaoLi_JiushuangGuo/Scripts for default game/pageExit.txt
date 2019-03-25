@@ -1,0 +1,5 @@
+addPage_pageExit_onEnter|play victory;/
+addShape_100_200_carrot1_false_true_carrot_null_null/
+addShape_200_100_carrot2_false_true_carrot_null_null/
+addShape_300_200_carrot3_false_true_carrot_null_null/
+addShape_100_100_winText_false_true_null_You Win Yay!_null/

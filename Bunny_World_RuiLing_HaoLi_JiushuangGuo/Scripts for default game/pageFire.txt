@@ -1,0 +1,5 @@
+addPage_pageFire_onEnter|play fire;/
+addShape_0_0_fireDoor_false_true_null_null_onClick|goto pageMystic/
+addShape_100_200_fireImage_false_true_fire_null_null/
+addShape_100_300_fireText_false_true_null_Eek! Fire-Room. Run away!_null/
+addShape_1500_500_carrotImage_true_true_carrot_null_null/
